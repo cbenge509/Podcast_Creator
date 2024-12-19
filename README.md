@@ -8,7 +8,7 @@ Podcast Creator
 ### Final Project for E6998 Design for Gen AI - Fall 2024
 #### Author : [Cristopher Benge](https://cbenge509.github.io/)
 
-<br><br><br>
+<br><br>
 Columbia University in the City of New York
 
 ------
