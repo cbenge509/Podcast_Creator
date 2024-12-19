@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Creator - Columbia University</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trajan+Pro:400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Create your <span class="gradient-text">engaging podcast</span> now!</h1>
+    </header>
+    <main class="container">
+        <div class="content-wrapper">
+            <section id="parameter-bar">
+                <form id="pdfUploadForm">
+                    <div class="parameter-item" id="uploadPdfItem">
+                        <span>Upload PDF</span>
+                        <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
+                    </div>
+                    <div class="parameter-item left-align">
+                        <span>Mood</span>
+                        <select id="mood" name="mood" required>
+                            <option value="Funny">Funny</option>
+                            <option value="Professional">Professional</option>
+                            <option value="Dumbed Down">Dumbed Down</option>
+                            <option value="Reverent">Reverent</option>
+                            <option value="Troubled">Troubled</option>
+                            <option value="Quirky">Quirky</option>
+                        </select>
+                    </div>
+                    <div class="parameter-item left-align">
+                        <span>Output Language</span>
+                        <select id="outputLanguage" name="outputLanguage" required>
+                            <option value="en-US">English (US)</option>
+                            <option value="es-ES">Spanish</option>
+                            <option value="de-DE">German</option>
+                            <option value="fr-FR">French</option>
+                        </select>
+                    </div>
+                    <div class="parameter-item">
+                        <span>Host Voice</span>
+                        <select id="hostVoice" name="hostVoice" required>
+                            <option value="">Loading voices...</option>
+                        </select>
+                    </div>
+                    <div class="parameter-item">
+                        <span>Guest Voice</span>
+                        <select id="guestVoice" name="guestVoice" required>
+                            <option value="">Loading voices...</option>
+                        </select>
+                    </div>
+                    <div class="parameter-item">
+                        <span>Podcast Length (words)</span>
+                        <input type="range" id="podcastLength" name="podcastLength" min="300" max="2100" step="300" value="300">
+                        <output for="podcastLength" id="podcastLengthValue">300</output>
+                    </div>
+                    <button type="submit" id="generateButton">Generate!</button>
+                </form>
+            </section>
+            <section id="result" style="display: none;">
+                <h3>Generated Podcast</h3>
+                <audio id="podcastAudio" controls></audio>
+                <div class="download-buttons">
+                    <a id="downloadLink" href="#" download="podcast.mp3">Download Podcast</a>
+                </div>
+                <p id="generationTime"></p>
+                <div id="scriptDisplay" class="script-content">
+                    <h3>Generated Script</h3>
+                    <div id="scriptText"></div>
+                </div>
+            </section>
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Generating podcast, please wait...</p>
+            </div>
+            <section id="preview-section" style="display: none;">
+                <h2>Document Preview</h2>
+                <div id="pdf-viewer"></div>
+            </section>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Creator - Turn PDFs into Podcasts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Transform any PDF into an <span class="gradient-text">engaging podcast.</span></h1>
+            <p class="subheading">Harness the power of AI to automatically transform your PDF documents into professional, multilingual podcasts with customizable moods and voices.</p>
+            <a href="{{ url_for('app_index') }}" class="cta-button">Get started</a>
+        </header>
+        <header class="header"><h2>You're just <span class="gradient-text">three easy steps</span> away from your podcast!</h2></header>
+        <div class="steps">
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-icon">1</div>
+                    <div class="step-title">Upload a PDF document</div>
+                </div>
+                <div class="step-content">
+                    Simply upload any PDF document to our system.  A preview of the document will be displayed for your review prior to generating the podcast.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-icon">2</div>
+                    <div class="step-title">Choose your preferences</div>
+                </div>
+                <div class="step-content">
+                    Select your desired length (in words) and mood for the podcast
+                    <div class="options">
+                        <div class="option">😂 Funny</div>
+                        <div class="option">😐 Professional</div>
+                        <div class="option">🤪 Dumbed Down</div>
+                        <div class="option">🫡 Reverent</div>
+                        <div class="option">🤔 Troubled</div>
+                        <div class="option">🤓 Quirky</div>
+                    </div><br>
+                    and your desired language for the podcast
+                    <div class="options">
+                        <div class="option">English (en)</div>
+                        <div class="option">Français (fr)</div>
+                        <div class="option">Deutsch (🇩🇪)</div>
+                        <div class="option">Español (🇪🇸)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-icon">3</div>
+                    <div class="step-title">Generate your podcast</div>
+                </div>
+                <div class="step-content">
+                    Our AI system converts your document into a natural-sounding podcast
+                </div>
+            </div>
+        </div>
+
+        <div class="author-section">
+            <img src="{{ url_for('static', filename='author.jpg') }}" alt="Author" class="author-image">
+            <div class="author-info">
+                <div class="author-name">Cris Benge</div>
+                <div class="author-title">Columbia University</div>
+                <div class="author-contact">
+                    <a href="https://www.linkedin.com/in/crisbenge/" class="author-link">LinkedIn</a>&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
+                    <a href="https://cbenge509.github.io/" class="author-link">Website</a>&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
+                    <a href="mailto:c.benge@columbia.edu" class="author-link">Email</a></div>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What types of PDFs work best?
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    The kind with words... lots of words (in English), and preferably about something you're interested in.  The more words, the better the podcast! I have tested it with PDFs that include just images and it doesn't do a good job of making sense out of those right now.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How long does it take to generate a podcast?
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    It depends.  If you're not converting to another language and you're sticking with 300 words, it should take under a minute.  The more words you want, the longer it will take.  If you're converting to another language, it will take even longer.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What audio formats are supported?
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Right now, this only generates MP3 files.  I can add more formats if there's a demand for it.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='landing_script.js') }}"></script>
+</body>
+</html>
