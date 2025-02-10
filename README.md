@@ -1,7 +1,7 @@
 Podcast Creator
 ===================
 
-![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/:user/:repo) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://github.com/cbenge509/Podcast_Creator/blob/main/LICENSE)
+[![PyPI - Python](https://img.shields.io/badge/Python-v3.11+-4584b6.svg?style=forthebadge&logo=python)](https://github.com/cbenge509/strategic_sales_analytics/) [![PyPI - Google-GenerativeAI](https://img.shields.io/badge/Google_GenAI-v0.8.3-4285F4?style=forthebadge&logo=google)](https://pypi.org/project/google-generativeai/)
 
 <img align="right" width="180" src="./images/cu_logo.jpg"/>
 
